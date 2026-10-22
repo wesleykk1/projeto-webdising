@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cinzel+Decorative:wght@700&family=Marcellus&display=swap');
+
+/* Configurações Globais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Fundo ligeiramente mais escuro e acinzentado (efeito pedra/mármore envelhecido) */
+    background-color: #d1c7b7;
+    background-image: 
+        radial-gradient(circle at 50% 30%, rgba(220, 212, 198, 0.7), rgba(160, 150, 135, 0.85)),
+        url('https://www.transparenttextures.com/patterns/marble.png');
+    color: #241d18;
+    font-family: 'Marcellus', serif;
+    font-size: 18px;
+    min-height: 100vh;
+    padding-bottom: 40px;
+}
+
+/* Header fixo - Estilo Friso de Templo Clássico */
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: linear-gradient(180deg, #ede6d6 0%, #d4c9ad 100%);
+    border-bottom: 4px solid #b8860b;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    padding: 14px 20px;
+    margin-bottom: 30px;
+}
+
+.header-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.header-crest {
+    font-size: 2.2rem;
+}
+
+.main-header h1 {
+    font-family: 'Cinzel Decorative', 'Cinzel', serif;
+    font-size: 1.8rem;
+    color: #1a1410;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgba(212, 175, 55, 0.5);
+}
+
+.main-header nav {
+    display: flex;
+    gap: 10px;
+}
+
+.main-header nav a {
+    color: #4a3312;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 8px 14px;
+    border: 1px solid #b8860b;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.main-header nav a:hover,
+.main-header nav a.active {
+    background: #b8860b;
+    color: #ffffff;
+    border-color: #8b6508;
+    box-shadow: 0 2px 8px rgba(184, 134, 11, 0.4);
+}
+
+/* Div Central - Mármore Claro criando contraste com o fundo mais escuro */
+.main-container {
+    max-width: 850px;
+    margin: 0 auto;
+    background: #f5f0e6;
+    background-image: linear-gradient(to bottom, #fcf8f0, #eae2d1);
+    border: 3px solid #b8860b;
+    border-radius: 8px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25), inset 0 0 15px rgba(184, 134, 11, 0.15);
+    padding: 40px;
+}
+
+/* Banners e Títulos */
+.banner-section {
+    text-align: center;
+    border-bottom: 2px double #b8860b;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.banner-section h2, 
+.video-section h2, 
+.single-image-section h2,
+.table-section h2 {
+    font-family: 'Cinzel Decorative', 'Cinzel', serif;
+    color: #1a1410;
+    font-size: 2.1rem;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.banner-section p {
+    font-size: 1.2rem;
+    color: #4a3a2a;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Seção de Textos */
+.text-section {
+    margin-bottom: 30px;
+}
+
+.custom-text {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #241d18;
+    text-align: justify;
+    margin-bottom: 15px;
+    background: rgba(228, 219, 202, 0.6);
+    padding: 18px;
+    border-left: 4px solid #b8860b;
+    border-radius: 0 6px 6px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Local de Vídeo Centralizado (Página Inicial) */
+.video-section {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Local de Vídeo Centralizado (Página Inicial) */
+.video-section {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* O container agora se ajusta ao tamanho exato do vídeo que estiver dentro dele */
+.video-placeholder {
+    display: inline-block; /* Faz o container abraçar o tamanho exato do conteúdo */
+    max-width: 100%; /* Garante que não estoure em telas de celular */
+    border: 2px dashed #b8860b;
+    background: rgba(225, 215, 198, 0.6);
+    border-radius: 8px;
+    padding: 8px; /* Espaçamento interno opcional entre a borda e o vídeo; mude para 0px se quiser colado */
+    margin-top: 15px;
+}
+
+/* Faz a tag <video> ocupar o espaço dentro do container de forma responsiva */
+.video-placeholder video {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+/* Seção para 1 Única Imagem */
+.single-image-section {
+    text-align: center;
+}
+
+.image-card {
+    background: #ede6d8;
+    border: 2px solid #b8860b;
+    border-radius: 8px;
+    padding: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.image-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    color: #1a1410;
+    margin-bottom: 6px;
+}
+
+.image-card p {
+    font-size: 1rem;
+    color: #4a3a2a;
+    line-height: 1.4;
+}
+
+/* Moldura para o container da imagem */
+.image-placeholder {
+    width: 100%;
+    height: 280px;
+    border: 2px solid #b8860b;
+    background: #d8ceb9;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5c4a35;
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    padding: 6px;
+    overflow: hidden;
+}
+
+.image-placeholder img,
+.imagens {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: all 0.4s ease;
+}
+
+.image-card:hover .image-placeholder img,
+.image-card:hover .imagens {
+    transform: scale(1.03);
+}
+
+/* Seção e Estilização da Tabela */
+.table-section {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+.medieval-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.85);
+    border: 2px solid #b8860b;
+    border-radius: 6px;
+    overflow: hidden;
+    font-size: 1rem;
+}
+
+.medieval-table th, 
+.medieval-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #d4af37;
+}
+
+.medieval-table th {
+    background: #dcd0b3;
+    color: #1a1410;
+    font-family: 'Cinzel', serif;
+    font-size: 1.05rem;
+    border-bottom: 2px solid #b8860b;
+}
+
+.medieval-table tr:nth-child(even) {
+    background: rgba(184, 134, 11, 0.08);
+}
+
+.medieval-table tr:hover {
+    background: rgba(184, 134, 11, 0.22);
+}
+
+.medieval-table td {
+    color: #241d18;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-container {
+        margin: 0 15px;
+        padding: 20px;
+    }
+
+    .image-placeholder {
+        height: 200px;
+    }
+}
